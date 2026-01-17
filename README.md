@@ -5,6 +5,7 @@ Reference implementation of the Carbon Protocol for deterministic prompt compres
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-Patent%20Pending-blue)
 ![Paper](https://img.shields.io/badge/ICT4S-Submitted-orange)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18284932.svg)](https://doi.org/10.5281/zenodo.18284932)
 
 > **"Shift Left" for Green AI:** Moving semantic parsing from the Data Center GPU to the Client Edge CPU.
 
