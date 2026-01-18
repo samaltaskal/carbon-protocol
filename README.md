@@ -213,6 +213,18 @@ automaton.find_all(text)      # Single pass
 | Single compression | O(n + z) | 0.85ms |
 | Batch (500 prompts) | O(n + z) | 1.5ms |
 
+## 📈 Dictionary Growth Tracker
+
+Tracking the expansion of Carbon Protocol's semantic dictionaries over time.
+
+| Date       | Version | New Domains Added | Patterns Added | Total Patterns | Source |
+|------------|---------|-------------------|----------------|----------------|--------|
+| 2026-01-18 | v1.1.0  | Prompts/Roleplay  | +4,106         | ~5,480         | `awesome-chatgpt-prompts` |
+| 2026-01-18 | v1.1.0  | Tasks (Email, Data, debug, etc) | +213           | ~1,374         | Manual Heuristics |
+| 2026-01-18 | v1.1.0  | Cloud (AWS, Azure, GCP) | +653           | ~1,161         | CLI Documentation |
+| 2026-01-18 | v1.1.0  | Kubernetes        | +129           | ~508           | VS Code Snippets |
+| 2026-01-17 | v1.0.0  | Python, SQL (Core)| +379           | 379            | Initial Release |
+
 ## 🌍 Environmental Impact
 
 Based on validation testing with 15 representative prompts (VAL-20260117-230537):
