@@ -11,7 +11,7 @@ Features:
 - Type-safe Python 3.10+ API
 
 Quick Start:
-    >>> from src import Registry, Compiler
+    >>> from carbon_protocol import Registry, Compiler
     >>> 
     >>> # Initialize and load domains
     >>> registry = Registry()
@@ -33,8 +33,8 @@ Performance:
     Space Complexity: O(m) where m = total pattern characters
 """
 
-__version__ = "0.1.0"
-__author__ = "Carbon Protocol Team"
+__version__ = "1.0.0"
+__author__ = "Taskal Samal"
 
 from .registry import Registry
 from .compiler import Compiler, CompressionResult

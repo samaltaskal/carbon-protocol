@@ -5,6 +5,19 @@ All notable changes to the Carbon Protocol SDK will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [1.0.1] - 2026-01-17
+
+### Added
+- `pyproject.toml` for pip installation support (`pip install carbon-protocol`)
+- Status, Paper, and DOI badges to README
+
+### Changed
+- Package now installable via pip instead of source checkout only
+- Import path updated: `from carbon_protocol import Registry, Compiler`
+- Updated `__version__` to 1.0.0 in `src/__init__.py`
+
 ## [1.0.0] - 2026-01-17
 
 ### Added
@@ -63,6 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Date       | Description                    |
 |---------|------------|--------------------------------|
+| 1.0.1   | 2026-01-17 | pip install support, badges   |
 | 1.0.0   | 2026-01-17 | Initial release                |
 
 ---

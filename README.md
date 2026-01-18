@@ -3,11 +3,15 @@
 High-performance deterministic semantic compression library for LLM prompts using Aho-Corasick multi-pattern matching.
 
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-Patent%20Pending-blue)
+![Paper](https://img.shields.io/badge/ICT4S-Submitted-orange)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18284932-blue)](https://doi.org/10.5281/zenodo.18284932)
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+![Tests](https://img.shields.io/badge/tests-61%20passing-brightgreen)
 
 > **"Shift Left" for Green AI:** Client-side semantic compression with <10ms latency and 25%+ token reduction.
+
+**Paper Submission:** [Zero-Overhead Prompt Compression: A Deterministic Protocol for Energy-Efficient Generative AI](https://doi.org/10.5281/zenodo.18284932) (Submitted to ICT4S 2026)
 
 ## 📄 Overview
 
@@ -26,23 +30,29 @@ The Carbon Protocol SDK implements deterministic semantic compression using the 
 
 ## 📦 Installation
 
+### Via pip (Recommended)
+```bash
+pip install carbon-protocol
+```
+
+### From Source
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/samaltaskal/carbon-protocol.git
 cd carbon-protocol
 
 # Create virtual environment
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-# Install dependencies
-pip install pyahocorasick pyyaml pytest
+# Install in development mode
+pip install -e ".[dev]"
 ```
 
 ## ⚡ Quick Start
 
 ```python
-from src import Registry, Compiler
+from carbon_protocol import Registry, Compiler
 
 # Initialize and load domain patterns
 registry = Registry()
