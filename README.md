@@ -71,34 +71,49 @@ print(f"Tokens Saved: {result.matches_found}")
 
 ## 📊 Validated Results
 
-From SDK validation suite (VAL-20260117):
+From SDK validation suite (VAL-20260117-230537):
 
 | Metric | Value |
 |--------|-------|
 | **Average Token Reduction** | 25.8% |
 | **Compression Ratio** | 0.74 |
-| **Carbon Saved (1M requests/year)** | 0.91 kg CO2 |
-| **Cost Saved (1M requests/year)** | $64 USD |
-| **Test Coverage** | 52 tests, 100% pass rate |
+| **Total Tests** | 61 tests, 100% pass rate |
+
+### Industry-Scale Impact Projections
+
+| Scale | Annual Requests | Carbon Saved | Cost Saved |
+|-------|-----------------|--------------|------------|
+| Small Org | 1M | 0.91 kg CO2 | $64 |
+| Medium Org | 10M | 9.12 kg CO2 | $640 |
+| Large Org | 100M | 91.2 kg CO2 | $6,400 |
+| Enterprise | 1B | 912 kg CO2 | $64,000 |
+
+### Global Adoption Scenarios (7T tokens/year baseline)
+
+| Adoption | Carbon Saved | Cost Saved |
+|----------|--------------|------------|
+| 1% | 2.57 tonnes | $0.18M |
+| 10% | 25.73 tonnes | $1.81M |
+| 100% | 257.31 tonnes | $18.06M |
 
 ## 🧪 Testing & Validation
 
 ### Run All Tests
 ```bash
-# Standard test suite (52 tests)
+# Full test suite (61 tests)
 pytest tests/ -v
 
 # With IEEE 829 report generation
-pytest --ieee-report --ieee-json
+cd tests && python run_tests.py --ieee
 
-# Or use test runner
-python run_tests.py --ieee
+# Run comprehensive test runner
+cd tests && python run_all_tests.py
 ```
 
 ### SDK Validation Tests
 ```bash
 # Run validation/impact assessment
-python run_tests.py --validation
+cd tests && python run_tests.py --validation
 
 # Direct run with detailed output
 pytest tests/test_validation.py -v -s
@@ -127,13 +142,19 @@ carbon-protocol/
 │   ├── test_compiler.py    # Compiler unit tests (19 tests)
 │   ├── test_integration.py # Integration tests (17 tests)
 │   ├── test_validation.py  # SDK validation tests (5 tests)
+│   ├── test_industry_impact.py # Industry impact tests (4 tests)
+│   ├── run_all_tests.py    # Comprehensive test runner
+│   ├── run_tests.py        # Flexible test runner
+│   ├── compare_results.py  # Results comparison utility
 │   └── results/            # Test results by date
 │       └── YYYY-MM-DD/     # Date-based folders
 ├── docs/                   # Documentation
 │   ├── api/                # API reference
 │   ├── guides/             # User guides
 │   └── architecture/       # System design
-└── run_tests.py            # Test runner script
+├── CHANGELOG.md            # Version history
+├── VERSION                 # Current version
+└── pyproject.toml          # Package configuration
 ```
 
 ## 📖 Documentation
@@ -171,7 +192,7 @@ automaton.find_all(text)      # Single pass
 
 ## 🌍 Environmental Impact
 
-Based on validation testing with 15 representative prompts:
+Based on validation testing with 15 representative prompts (VAL-20260117-230537):
 
 **Per Sample Set (15 prompts)**:
 - Energy Saved: 0.000029 kWh
@@ -180,21 +201,41 @@ Based on validation testing with 15 representative prompts:
 
 **Projected Annual (1M requests)**:
 - Tokens Saved: 6.4 million
-- Carbon Saved: 0.91 kg CO2 (≈2.3 tree-days)
+- Carbon Saved: 0.91 kg CO2
+- Energy Saved: 1.92 kWh
+- Water Saved: 3.46 liters
 - Cost Saved: $64 USD
 
+**Environmental Equivalents (1M requests/year)**:
+- 114 smartphone charges
+- 2 miles not driven
+- 0.1 car-days off the road
+
 *Calculations based on peer-reviewed research (Patterson et al., 2021) and IEA carbon intensity data.*
+
+## 🏭 Industry-Scale Impact
+
+Based on global LLM token consumption baseline of **7 trillion tokens/year**:
+
+### Full Global Adoption Potential
+| Metric | Value |
+|--------|-------|
+| Tokens Saved | 1.8 trillion |
+| Carbon Saved | 257.31 tonnes CO2 |
+| Energy Saved | 541.71 MWh |
+| Cost Saved | $18.06 million |
+| Water Saved | 0.98 megaliters |
 
 ## 💰 Cost Savings
 
 Assuming $0.01 per 1K input tokens (conservative estimate):
 
-| Request Volume | Token Reduction | Annual Savings |
-|----------------|-----------------|----------------|
-| 100K requests  | 640K tokens     | $6.40 |
-| 1M requests    | 6.4M tokens     | $64.00 |
-| 10M requests   | 64M tokens      | $640.00 |
-| 100M requests  | 640M tokens     | $6,400.00 |
+| Scale | Request Volume | Tokens Saved | Annual Savings |
+|-------|----------------|--------------|----------------|
+| Small | 1M requests | 6.4M tokens | $64 |
+| Medium | 10M requests | 64M tokens | $640 |
+| Large | 100M requests | 640M tokens | $6,400 |
+| Enterprise | 1B requests | 6.4B tokens | $64,000 |
 
 *Actual savings scale with API pricing and request patterns.*
 
