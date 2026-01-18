@@ -1,0 +1,275 @@
+# Carbon Protocol SDK - Core Domain Rules
+# 
+# This file contains the foundational compression patterns used across all domains.
+# Patterns are processed using Aho-Corasick algorithm for O(n) matching.
+#
+# Pattern Types:
+#   - Removal: output is empty string "" - pattern is stripped from input
+#   - Substitution: output is a token - pattern is replaced with compact token
+#
+# Token Naming Convention:
+#   @CATEGORY:SPECIFIC   - Actions, languages, concepts
+#   Examples: @LANG:PY, @ACT:SCRAPE, @OP:CREATE
+
+version: "1.0"
+domain: "core"
+description: "Core compression patterns for common phrases and commands"
+
+patterns:
+  # ============================================================
+  # REMOVALS - Filler words and politeness markers
+  # These phrases add no semantic value and are stripped entirely
+  # ============================================================
+  
+  - input: "please check"
+    output: ""
+    category: "filler"
+    
+  - input: "could you please"
+    output: ""
+    category: "filler"
+    
+  - input: "can you please"
+    output: ""
+    category: "filler"
+    
+  - input: "i would like you to"
+    output: ""
+    category: "filler"
+    
+  - input: "i want you to"
+    output: ""
+    category: "filler"
+    
+  - input: "i need you to"
+    output: ""
+    category: "filler"
+    
+  - input: "please help me"
+    output: ""
+    category: "filler"
+    
+  - input: "help me to"
+    output: ""
+    category: "filler"
+    
+  - input: "make sure to"
+    output: ""
+    category: "filler"
+    
+  - input: "don't forget to"
+    output: ""
+    category: "filler"
+
+  # ============================================================
+  # LANGUAGE TOKENS - Programming language references
+  # ============================================================
+  
+  - input: "write a python script"
+    output: "@LANG:PY"
+    category: "language"
+    
+  - input: "python script"
+    output: "@LANG:PY"
+    category: "language"
+    
+  - input: "python code"
+    output: "@LANG:PY"
+    category: "language"
+    
+  - input: "in python"
+    output: "@LANG:PY"
+    category: "language"
+    
+  - input: "using python"
+    output: "@LANG:PY"
+    category: "language"
+    
+  - input: "javascript code"
+    output: "@LANG:JS"
+    category: "language"
+    
+  - input: "typescript code"
+    output: "@LANG:TS"
+    category: "language"
+    
+  - input: "write a bash script"
+    output: "@LANG:BASH"
+    category: "language"
+    
+  - input: "shell script"
+    output: "@LANG:BASH"
+    category: "language"
+    
+  - input: "sql query"
+    output: "@LANG:SQL"
+    category: "language"
+
+  # ============================================================
+  # ACTION TOKENS - Common operations and verbs
+  # ============================================================
+  
+  - input: "scrape data from"
+    output: "@ACT:SCRAPE"
+    category: "action"
+    
+  - input: "scrape data"
+    output: "@ACT:SCRAPE"
+    category: "action"
+    
+  - input: "web scraping"
+    output: "@ACT:SCRAPE"
+    category: "action"
+    
+  - input: "extract data from"
+    output: "@ACT:EXTRACT"
+    category: "action"
+    
+  - input: "parse the"
+    output: "@ACT:PARSE"
+    category: "action"
+    
+  - input: "read the file"
+    output: "@ACT:READ_FILE"
+    category: "action"
+    
+  - input: "write to file"
+    output: "@ACT:WRITE_FILE"
+    category: "action"
+    
+  - input: "save to file"
+    output: "@ACT:WRITE_FILE"
+    category: "action"
+    
+  - input: "create a function"
+    output: "@OP:CREATE_FUNC"
+    category: "action"
+    
+  - input: "implement a function"
+    output: "@OP:CREATE_FUNC"
+    category: "action"
+    
+  - input: "write a function"
+    output: "@OP:CREATE_FUNC"
+    category: "action"
+
+  # ============================================================
+  # OPERATION TOKENS - CRUD and common operations
+  # ============================================================
+  
+  - input: "create a new"
+    output: "@OP:CREATE"
+    category: "operation"
+    
+  - input: "add a new"
+    output: "@OP:CREATE"
+    category: "operation"
+    
+  - input: "delete the"
+    output: "@OP:DELETE"
+    category: "operation"
+    
+  - input: "remove the"
+    output: "@OP:DELETE"
+    category: "operation"
+    
+  - input: "update the"
+    output: "@OP:UPDATE"
+    category: "operation"
+    
+  - input: "modify the"
+    output: "@OP:UPDATE"
+    category: "operation"
+    
+  - input: "list all"
+    output: "@OP:LIST"
+    category: "operation"
+    
+  - input: "show all"
+    output: "@OP:LIST"
+    category: "operation"
+    
+  - input: "get all"
+    output: "@OP:LIST"
+    category: "operation"
+    
+  - input: "find all"
+    output: "@OP:SEARCH"
+    category: "operation"
+    
+  - input: "search for"
+    output: "@OP:SEARCH"
+    category: "operation"
+
+  # ============================================================
+  # FORMAT TOKENS - Data formats and structures
+  # ============================================================
+  
+  - input: "json format"
+    output: "@FMT:JSON"
+    category: "format"
+    
+  - input: "as json"
+    output: "@FMT:JSON"
+    category: "format"
+    
+  - input: "to json"
+    output: "@FMT:JSON"
+    category: "format"
+    
+  - input: "csv file"
+    output: "@FMT:CSV"
+    category: "format"
+    
+  - input: "yaml file"
+    output: "@FMT:YAML"
+    category: "format"
+    
+  - input: "xml format"
+    output: "@FMT:XML"
+    category: "format"
+
+  # ============================================================
+  # CONTEXT TOKENS - Environment and context markers
+  # ============================================================
+  
+  - input: "from the database"
+    output: "@CTX:DB"
+    category: "context"
+    
+  - input: "in the database"
+    output: "@CTX:DB"
+    category: "context"
+    
+  - input: "from the api"
+    output: "@CTX:API"
+    category: "context"
+    
+  - input: "using the api"
+    output: "@CTX:API"
+    category: "context"
+    
+  - input: "from the web"
+    output: "@CTX:WEB"
+    category: "context"
+    
+  - input: "on the server"
+    output: "@CTX:SERVER"
+    category: "context"
+
+  # ============================================================
+  # TOOL TOKENS - Development tools and IDEs
+  # Demonstrates longest-match-first: "visual studio code" before "visual studio"
+  # ============================================================
+  
+  - input: "visual studio code"
+    output: "@TOOL:VSCODE"
+    category: "tool"
+    
+  - input: "visual studio"
+    output: "@TOOL:VS"
+    category: "tool"
+    
+  - input: "vs code"
+    output: "@TOOL:VSCODE"
+    category: "tool"

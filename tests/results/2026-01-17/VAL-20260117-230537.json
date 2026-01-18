@@ -1,0 +1,653 @@
+{
+  "test_id": "VAL-20260117-230537",
+  "test_date": "2026-01-17 23:05:37",
+  "test_environment": "Python 3.13.2",
+  "total_samples": 15,
+  "categories_tested": [
+    "Analysis",
+    "Complex",
+    "Data Processing",
+    "Development",
+    "Operations"
+  ],
+  "aggregate_metrics": {
+    "summary": {
+      "sample_count": 15,
+      "total_original_tokens": 375,
+      "total_compressed_tokens": 279,
+      "total_token_reduction": 96,
+      "avg_compression_ratio": 0.7381,
+      "avg_token_reduction_percent": 25.8
+    },
+    "environmental_impact": {
+      "total_energy_saved_kwh": 2.9e-05,
+      "total_carbon_saved_grams": 0.0137,
+      "total_water_saved_liters": 5.2e-05
+    },
+    "cost_impact": {
+      "total_cost_saved_usd": 0.001
+    },
+    "projections": {
+      "annual_tokens_saved": 6400000,
+      "annual_carbon_saved_kg": 0.91,
+      "annual_cost_saved_usd": 64.0
+    }
+  },
+  "sample_results": [
+    {
+      "input": {
+        "text": "Could you please write a python script to scrape data from the web and save it to a json format file...",
+        "characters": 101,
+        "estimated_tokens": 25
+      },
+      "output": {
+        "text": " @LANG:PY to @ACT:SCRAPE the web and save it to a @FMT:JSON file?",
+        "characters": 65,
+        "estimated_tokens": 16
+      },
+      "reduction": {
+        "characters": 36,
+        "characters_percent": 35.64,
+        "tokens": 9,
+        "tokens_percent": 36.0
+      },
+      "environmental_savings": {
+        "energy_kwh": 2.6999999999999996e-06,
+        "carbon_grams": 0.001282,
+        "carbon_kg": 1.282e-06,
+        "water_liters": 5e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 9e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.6436,
+        "patterns_matched": 4
+      },
+      "category": "Development",
+      "description": "Python script request"
+    },
+    {
+      "input": {
+        "text": "I need you to write a sql query to search for all users in the database and list all their records.",
+        "characters": 99,
+        "estimated_tokens": 24
+      },
+      "output": {
+        "text": " write a @LANG:SQL to @OP:SEARCH all users @CTX:DB and @OP:LIST their records.",
+        "characters": 78,
+        "estimated_tokens": 19
+      },
+      "reduction": {
+        "characters": 21,
+        "characters_percent": 21.21,
+        "tokens": 5,
+        "tokens_percent": 20.83
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.4999999999999998e-06,
+        "carbon_grams": 0.000712,
+        "carbon_kg": 7.12e-07,
+        "water_liters": 3e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 5e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.7879,
+        "patterns_matched": 5
+      },
+      "category": "Development",
+      "description": "Database query request"
+    },
+    {
+      "input": {
+        "text": "Please help me to create a function that can read the file and parse the data from the api.",
+        "characters": 91,
+        "estimated_tokens": 22
+      },
+      "output": {
+        "text": " to @OP:CREATE_FUNC that can @ACT:READ_FILE and @ACT:PARSE data @CTX:API.",
+        "characters": 73,
+        "estimated_tokens": 18
+      },
+      "reduction": {
+        "characters": 18,
+        "characters_percent": 19.78,
+        "tokens": 4,
+        "tokens_percent": 18.18
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.2e-06,
+        "carbon_grams": 0.00057,
+        "carbon_kg": 5.7e-07,
+        "water_liters": 2e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 4e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.8022,
+        "patterns_matched": 5
+      },
+      "category": "Development",
+      "description": "Function implementation"
+    },
+    {
+      "input": {
+        "text": "Could you please check the python code and help me to update the function to handle errors?",
+        "characters": 91,
+        "estimated_tokens": 22
+      },
+      "output": {
+        "text": " check the @LANG:PY and  @OP:UPDATE function to handle errors?",
+        "characters": 62,
+        "estimated_tokens": 15
+      },
+      "reduction": {
+        "characters": 29,
+        "characters_percent": 31.87,
+        "tokens": 7,
+        "tokens_percent": 31.82
+      },
+      "environmental_savings": {
+        "energy_kwh": 2.1e-06,
+        "carbon_grams": 0.000997,
+        "carbon_kg": 9.97e-07,
+        "water_liters": 4e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 7e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.6813,
+        "patterns_matched": 4
+      },
+      "category": "Development",
+      "description": "Code review request"
+    },
+    {
+      "input": {
+        "text": "I want you to write a bash script for visual studio code to create a new project structure.",
+        "characters": 91,
+        "estimated_tokens": 22
+      },
+      "output": {
+        "text": " @LANG:BASH for @TOOL:VSCODE to @OP:CREATE project structure.",
+        "characters": 61,
+        "estimated_tokens": 15
+      },
+      "reduction": {
+        "characters": 30,
+        "characters_percent": 32.97,
+        "tokens": 7,
+        "tokens_percent": 31.82
+      },
+      "environmental_savings": {
+        "energy_kwh": 2.1e-06,
+        "carbon_grams": 0.000997,
+        "carbon_kg": 9.97e-07,
+        "water_liters": 4e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 7e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.6703,
+        "patterns_matched": 4
+      },
+      "category": "Development",
+      "description": "Tool-specific request"
+    },
+    {
+      "input": {
+        "text": "Please help me to extract data from the csv file and convert it to json format for the api.",
+        "characters": 91,
+        "estimated_tokens": 22
+      },
+      "output": {
+        "text": " to @ACT:EXTRACT the @FMT:CSV and convert it @FMT:JSON format for the api.",
+        "characters": 74,
+        "estimated_tokens": 18
+      },
+      "reduction": {
+        "characters": 17,
+        "characters_percent": 18.68,
+        "tokens": 4,
+        "tokens_percent": 18.18
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.2e-06,
+        "carbon_grams": 0.00057,
+        "carbon_kg": 5.7e-07,
+        "water_liters": 2e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 4e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.8132,
+        "patterns_matched": 4
+      },
+      "category": "Data Processing",
+      "description": "Data extraction"
+    },
+    {
+      "input": {
+        "text": "I would like you to write a python script to read the file from the database and save to file.",
+        "characters": 94,
+        "estimated_tokens": 23
+      },
+      "output": {
+        "text": " @LANG:PY to @ACT:READ_FILE @CTX:DB and @ACT:WRITE_FILE.",
+        "characters": 56,
+        "estimated_tokens": 14
+      },
+      "reduction": {
+        "characters": 38,
+        "characters_percent": 40.43,
+        "tokens": 9,
+        "tokens_percent": 39.13
+      },
+      "environmental_savings": {
+        "energy_kwh": 2.6999999999999996e-06,
+        "carbon_grams": 0.001282,
+        "carbon_kg": 1.282e-06,
+        "water_liters": 5e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 9e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.5957,
+        "patterns_matched": 5
+      },
+      "category": "Data Processing",
+      "description": "Data transformation"
+    },
+    {
+      "input": {
+        "text": "Could you please create a function to list all files and extract data from each one?",
+        "characters": 84,
+        "estimated_tokens": 21
+      },
+      "output": {
+        "text": " @OP:CREATE_FUNC to @OP:LIST files and @ACT:EXTRACT each one?",
+        "characters": 61,
+        "estimated_tokens": 15
+      },
+      "reduction": {
+        "characters": 23,
+        "characters_percent": 27.38,
+        "tokens": 6,
+        "tokens_percent": 28.57
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.8e-06,
+        "carbon_grams": 0.000855,
+        "carbon_kg": 8.55e-07,
+        "water_liters": 3e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 6e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.7262,
+        "patterns_matched": 4
+      },
+      "category": "Data Processing",
+      "description": "Batch processing"
+    },
+    {
+      "input": {
+        "text": "I need you to write a shell script to update the configuration on the server and delete the old file...",
+        "characters": 102,
+        "estimated_tokens": 25
+      },
+      "output": {
+        "text": " write a @LANG:BASH to @OP:UPDATE configuration @CTX:SERVER and @OP:DELETE old files.",
+        "characters": 85,
+        "estimated_tokens": 21
+      },
+      "reduction": {
+        "characters": 17,
+        "characters_percent": 16.67,
+        "tokens": 4,
+        "tokens_percent": 16.0
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.2e-06,
+        "carbon_grams": 0.00057,
+        "carbon_kg": 5.7e-07,
+        "water_liters": 2e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 4e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.8333,
+        "patterns_matched": 5
+      },
+      "category": "Operations",
+      "description": "Server management"
+    },
+    {
+      "input": {
+        "text": "Please help me to create a new deployment script using python to modify the settings on the server.",
+        "characters": 99,
+        "estimated_tokens": 24
+      },
+      "output": {
+        "text": " to @OP:CREATE deployment script @LANG:PY to @OP:UPDATE settings @CTX:SERVER.",
+        "characters": 77,
+        "estimated_tokens": 19
+      },
+      "reduction": {
+        "characters": 22,
+        "characters_percent": 22.22,
+        "tokens": 5,
+        "tokens_percent": 20.83
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.4999999999999998e-06,
+        "carbon_grams": 0.000712,
+        "carbon_kg": 7.12e-07,
+        "water_liters": 3e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 5e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.7778,
+        "patterns_matched": 5
+      },
+      "category": "Operations",
+      "description": "Deployment request"
+    },
+    {
+      "input": {
+        "text": "Could you please write a python script to search for patterns in the database and show all results?",
+        "characters": 99,
+        "estimated_tokens": 24
+      },
+      "output": {
+        "text": " @LANG:PY to @OP:SEARCH patterns @CTX:DB and @OP:LIST results?",
+        "characters": 62,
+        "estimated_tokens": 15
+      },
+      "reduction": {
+        "characters": 37,
+        "characters_percent": 37.37,
+        "tokens": 9,
+        "tokens_percent": 37.5
+      },
+      "environmental_savings": {
+        "energy_kwh": 2.6999999999999996e-06,
+        "carbon_grams": 0.001282,
+        "carbon_kg": 1.282e-06,
+        "water_liters": 5e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 9e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.6263,
+        "patterns_matched": 5
+      },
+      "category": "Analysis",
+      "description": "Data analysis"
+    },
+    {
+      "input": {
+        "text": "I want you to create a function to get all data from the api and format it as json for the report.",
+        "characters": 98,
+        "estimated_tokens": 24
+      },
+      "output": {
+        "text": " @OP:CREATE_FUNC to @OP:LIST data @CTX:API and format it @FMT:JSON for the report.",
+        "characters": 82,
+        "estimated_tokens": 20
+      },
+      "reduction": {
+        "characters": 16,
+        "characters_percent": 16.33,
+        "tokens": 4,
+        "tokens_percent": 16.67
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.2e-06,
+        "carbon_grams": 0.00057,
+        "carbon_kg": 5.7e-07,
+        "water_liters": 2e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 4e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.8367,
+        "patterns_matched": 5
+      },
+      "category": "Analysis",
+      "description": "Report generation"
+    },
+    {
+      "input": {
+        "text": "Please help me to write a python script that can scrape data from the web, parse the json format, an...",
+        "characters": 131,
+        "estimated_tokens": 32
+      },
+      "output": {
+        "text": " to @LANG:PY that can @ACT:SCRAPE the web, @ACT:PARSE @FMT:JSON, and @ACT:WRITE_FILE @CTX:DB.",
+        "characters": 93,
+        "estimated_tokens": 23
+      },
+      "reduction": {
+        "characters": 38,
+        "characters_percent": 29.01,
+        "tokens": 9,
+        "tokens_percent": 28.12
+      },
+      "environmental_savings": {
+        "energy_kwh": 2.6999999999999996e-06,
+        "carbon_grams": 0.001282,
+        "carbon_kg": 1.282e-06,
+        "water_liters": 5e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 9e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.7099,
+        "patterns_matched": 7
+      },
+      "category": "Complex",
+      "description": "Multi-step workflow"
+    },
+    {
+      "input": {
+        "text": "I would like you to create a function to read the file from the api, extract data, update the databa...",
+        "characters": 134,
+        "estimated_tokens": 33
+      },
+      "output": {
+        "text": " @OP:CREATE_FUNC to @ACT:READ_FILE @CTX:API, extract data, @OP:UPDATE database, and @ACT:WRITE_FILE ...",
+        "characters": 112,
+        "estimated_tokens": 28
+      },
+      "reduction": {
+        "characters": 22,
+        "characters_percent": 16.42,
+        "tokens": 5,
+        "tokens_percent": 15.15
+      },
+      "environmental_savings": {
+        "energy_kwh": 1.4999999999999998e-06,
+        "carbon_grams": 0.000712,
+        "carbon_kg": 7.12e-07,
+        "water_liters": 3e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 5e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.8358,
+        "patterns_matched": 7
+      },
+      "category": "Complex",
+      "description": "Full pipeline request"
+    },
+    {
+      "input": {
+        "text": "Could you please help me to write a python code for visual studio code that can search for all files...",
+        "characters": 130,
+        "estimated_tokens": 32
+      },
+      "output": {
+        "text": "  write a @LANG:PY for @TOOL:VSCODE that can @OP:SEARCH all files and @OP:UPDATE configuration?",
+        "characters": 95,
+        "estimated_tokens": 23
+      },
+      "reduction": {
+        "characters": 35,
+        "characters_percent": 26.92,
+        "tokens": 9,
+        "tokens_percent": 28.12
+      },
+      "environmental_savings": {
+        "energy_kwh": 2.6999999999999996e-06,
+        "carbon_grams": 0.001282,
+        "carbon_kg": 1.282e-06,
+        "water_liters": 5e-06
+      },
+      "cost_savings": {
+        "api_cost_usd": 9e-05
+      },
+      "efficiency": {
+        "compression_ratio": 0.7308,
+        "patterns_matched": 6
+      },
+      "category": "Complex",
+      "description": "IDE integration"
+    }
+  ],
+  "calculation_parameters": {
+    "chars_per_token": 4.0,
+    "energy_per_1k_tokens_kwh": 0.0003,
+    "carbon_intensity_kg_per_kwh": 0.475,
+    "cost_per_1k_tokens_usd": 0.01
+  },
+  "methodology": "Token Estimation: Characters divided by average chars/token (4.0 for English)\nEnergy Calculation: Based on Patterson et al. (2021) estimates for LLM inference\nCarbon Intensity: Global average grid carbon intensity (IEA 2023)\nCost Estimation: Based on typical LLM API pricing models\nProjections: Linear scaling based on 1 million annual requests",
+  "industry_impact": {
+    "sample_metrics": {
+      "total_samples": 15,
+      "average_reduction_percent": 25.8,
+      "tokens_per_sample": 6.4
+    },
+    "organizational_scale": {
+      "small_org_1M_requests": {
+        "requests": "1,000,000",
+        "tokens_saved": "6,400,000",
+        "carbon_kg": 0.91,
+        "carbon_tonnes": 0.0009,
+        "energy_kwh": 1.92,
+        "cost_saved_usd": "$64.00",
+        "water_saved_liters": 3.46
+      },
+      "medium_org_10M_requests": {
+        "requests": "10,000,000",
+        "tokens_saved": "64,000,000",
+        "carbon_kg": 9.12,
+        "carbon_tonnes": 0.0091,
+        "energy_kwh": 19.2,
+        "cost_saved_usd": "$640.00",
+        "water_saved_liters": 34.56
+      },
+      "large_org_100M_requests": {
+        "requests": "100,000,000",
+        "tokens_saved": "640,000,000",
+        "carbon_kg": 91.2,
+        "carbon_tonnes": 0.0912,
+        "energy_kwh": 192.0,
+        "cost_saved_usd": "$6,400.00",
+        "water_saved_liters": 345.6
+      },
+      "enterprise_1B_requests": {
+        "requests": "1,000,000,000",
+        "tokens_saved": "6,400,000,000",
+        "carbon_kg": 912.0,
+        "carbon_tonnes": 0.912,
+        "energy_kwh": 1920.0,
+        "cost_saved_usd": "$64,000.00",
+        "water_saved_liters": 3456.0
+      }
+    },
+    "industry_wide_impact": {
+      "one_percent_adoption": {
+        "adoption_rate": "1%",
+        "affected_tokens": "70,000,000,000",
+        "tokens_saved": "18,057,046,552",
+        "carbon_tonnes": "2.57",
+        "carbon_megatonnes": 3e-06,
+        "energy_mwh": 5.42,
+        "cost_saved_millions_usd": "$0.18M",
+        "water_saved_megaliters": 0.0098
+      },
+      "five_percent_adoption": {
+        "adoption_rate": "5%",
+        "affected_tokens": "350,000,000,000",
+        "tokens_saved": "90,285,232,762",
+        "carbon_tonnes": "12.87",
+        "carbon_megatonnes": 1.3e-05,
+        "energy_mwh": 27.09,
+        "cost_saved_millions_usd": "$0.90M",
+        "water_saved_megaliters": 0.0488
+      },
+      "ten_percent_adoption": {
+        "adoption_rate": "10%",
+        "affected_tokens": "700,000,000,000",
+        "tokens_saved": "180,570,465,525",
+        "carbon_tonnes": "25.73",
+        "carbon_megatonnes": 2.6e-05,
+        "energy_mwh": 54.17,
+        "cost_saved_millions_usd": "$1.81M",
+        "water_saved_megaliters": 0.0975
+      },
+      "full_adoption": {
+        "adoption_rate": "100%",
+        "affected_tokens": "7,000,000,000,000",
+        "tokens_saved": "1,805,704,655,248",
+        "carbon_tonnes": "257.31",
+        "carbon_megatonnes": 0.000257,
+        "energy_mwh": 541.71,
+        "cost_saved_millions_usd": "$18.06M",
+        "water_saved_megaliters": 0.9751
+      }
+    },
+    "environmental_equivalents": {
+      "annual_carbon_kg": 0.91,
+      "equivalent_to": {
+        "cars_off_road_days": 0.1,
+        "trees_planted_years": 0.0,
+        "smartphone_charges": "114",
+        "miles_not_driven": "2",
+        "flight_hours_avoided": 0.01
+      },
+      "sources": [
+        "EPA GHG Equivalencies Calculator",
+        "European Environment Agency Carbon Footprint Data",
+        "ICCT Transportation Emissions Database"
+      ]
+    },
+    "methodology": {
+      "global_baseline": {
+        "daily_tokens": "6,200,000,000",
+        "annual_tokens_conservative": "2,300,000,000,000",
+        "annual_tokens_realistic": "7,000,000,000,000"
+      },
+      "compression_rate": "25.80%",
+      "energy_per_1k_tokens": "0.0003 kWh",
+      "carbon_intensity": "0.475 kg CO2/kWh",
+      "api_cost": "$0.01/1K tokens"
+    }
+  }
+}

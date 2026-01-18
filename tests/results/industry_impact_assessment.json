@@ -1,0 +1,113 @@
+{
+  "sample_metrics": {
+    "total_samples": 15,
+    "average_reduction_percent": 20.91,
+    "tokens_per_sample": 4.7
+  },
+  "organizational_scale": {
+    "small_org_1M_requests": {
+      "requests": "1,000,000",
+      "tokens_saved": "4,733,333",
+      "carbon_kg": 0.67,
+      "carbon_tonnes": 0.0007,
+      "energy_kwh": 1.42,
+      "cost_saved_usd": "$47.33",
+      "water_saved_liters": 2.56
+    },
+    "medium_org_10M_requests": {
+      "requests": "10,000,000",
+      "tokens_saved": "47,333,333",
+      "carbon_kg": 6.74,
+      "carbon_tonnes": 0.0067,
+      "energy_kwh": 14.2,
+      "cost_saved_usd": "$473.33",
+      "water_saved_liters": 25.56
+    },
+    "large_org_100M_requests": {
+      "requests": "100,000,000",
+      "tokens_saved": "473,333,333",
+      "carbon_kg": 67.45,
+      "carbon_tonnes": 0.0674,
+      "energy_kwh": 142.0,
+      "cost_saved_usd": "$4,733.33",
+      "water_saved_liters": 255.6
+    },
+    "enterprise_1B_requests": {
+      "requests": "1,000,000,000",
+      "tokens_saved": "4,733,333,333",
+      "carbon_kg": 674.5,
+      "carbon_tonnes": 0.6745,
+      "energy_kwh": 1420.0,
+      "cost_saved_usd": "$47,333.33",
+      "water_saved_liters": 2556.0
+    }
+  },
+  "industry_wide_impact": {
+    "one_percent_adoption": {
+      "adoption_rate": "1%",
+      "affected_tokens": "70,000,000,000",
+      "tokens_saved": "14,639,917,418",
+      "carbon_tonnes": "2.09",
+      "carbon_megatonnes": 2e-06,
+      "energy_mwh": 4.39,
+      "cost_saved_millions_usd": "$0.15M",
+      "water_saved_megaliters": 0.0079
+    },
+    "five_percent_adoption": {
+      "adoption_rate": "5%",
+      "affected_tokens": "350,000,000,000",
+      "tokens_saved": "73,199,587,090",
+      "carbon_tonnes": "10.43",
+      "carbon_megatonnes": 1e-05,
+      "energy_mwh": 21.96,
+      "cost_saved_millions_usd": "$0.73M",
+      "water_saved_megaliters": 0.0395
+    },
+    "ten_percent_adoption": {
+      "adoption_rate": "10%",
+      "affected_tokens": "700,000,000,000",
+      "tokens_saved": "146,399,174,180",
+      "carbon_tonnes": "20.86",
+      "carbon_megatonnes": 2.1e-05,
+      "energy_mwh": 43.92,
+      "cost_saved_millions_usd": "$1.46M",
+      "water_saved_megaliters": 0.0791
+    },
+    "full_adoption": {
+      "adoption_rate": "100%",
+      "affected_tokens": "7,000,000,000,000",
+      "tokens_saved": "1,463,991,741,800",
+      "carbon_tonnes": "208.62",
+      "carbon_megatonnes": 0.000209,
+      "energy_mwh": 439.2,
+      "cost_saved_millions_usd": "$14.64M",
+      "water_saved_megaliters": 0.7906
+    }
+  },
+  "environmental_equivalents": {
+    "annual_carbon_kg": 0.67,
+    "equivalent_to": {
+      "cars_off_road_days": 0.1,
+      "trees_planted_years": 0.0,
+      "smartphone_charges": "84",
+      "miles_not_driven": "2",
+      "flight_hours_avoided": 0.01
+    },
+    "sources": [
+      "EPA GHG Equivalencies Calculator",
+      "European Environment Agency Carbon Footprint Data",
+      "ICCT Transportation Emissions Database"
+    ]
+  },
+  "methodology": {
+    "global_baseline": {
+      "daily_tokens": "6,200,000,000",
+      "annual_tokens_conservative": "2,300,000,000,000",
+      "annual_tokens_realistic": "7,000,000,000,000"
+    },
+    "compression_rate": "20.91%",
+    "energy_per_1k_tokens": "0.0003 kWh",
+    "carbon_intensity": "0.475 kg CO2/kWh",
+    "api_cost": "$0.01/1K tokens"
+  }
+}
