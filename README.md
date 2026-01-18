@@ -49,6 +49,29 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
 ```
 
+## 🛠️ Tools & Mining
+
+### Dictionary Builder
+Expand the semantic coverage by generating new dictionaries from open sources (Github snippets, Keyword lists):
+```bash
+# Generate all dictionaries (K8s, Cloud, Python, SQL, Prompts)
+python tools/build_dictionary.py --all
+
+# Generate only K8s dictionary
+python tools/build_dictionary.py --kubernetes
+```
+
+### Pattern Miner (New in v1.1.0)
+Discover new compression rules from large-scale log datasets using the automated mining pipeline.
+```bash
+# Analyze logs to find repeating N-Grams and semantic clusters
+python miner/discovery.py --input logs.txt --output new_rules.json
+```
+1. **Statistical**: Extracts frequent N-grams (CountVectorizer).
+2. **Semantic**: Encodes phrases into vector embeddings (SentenceTransformers).
+3. **Clustering**: Groups similar intents using DBSCAN.
+
+
 ## ⚡ Quick Start
 
 ```python

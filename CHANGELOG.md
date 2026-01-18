@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-01-18
+
+### Added
+- **Pattern Discovery Miner**: A new `miner` module (`miner/discovery.py`) to analyze log streams and discover new dictionary patterns using N-gram extraction and semantic clustering (DBSCAN).
+- **Dictionary Builder**: A comprehensive automation tool (`tools/build_dictionary.py`) to generate Carbon Protocol dictionaries from open web sources.
+- **New Dictionaries**: Added extensive dictionary support for:
+    - Kubernetes (`tools_kubernetes.yaml` - via VS Code snippets)
+    - Cloud Providers: AWS, Azure, GCP
+    - Roleplay Prompts (via `awesome-chatgpt-prompts`)
+    - Tasks: Email, Data Analysis, Creative Writing, Summarization, Debugging, API Interaction
+- **Dependencies**: Added `scikit-learn` and `sentence-transformers` for the mining pipeline.
+
+### Changed
+- Updated `pyproject.toml` version to 1.1.0.
+
 ## [1.0.1] - 2026-01-17
 
 ### Added

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "carbon-protocol"
-version = "1.0.0"
+version = "1.1.0"
 description = "High-performance deterministic semantic compression library for LLM prompts using Aho-Corasick multi-pattern matching"
 readme = "README.md"
 license = {text = "MIT"}
