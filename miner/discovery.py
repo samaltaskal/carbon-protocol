@@ -156,11 +156,13 @@ class PatternMiner:
         logger.info(f"Found {len(results)} intent clusters. {len(noise_phrases)} phrases identified as noise.")
         return results
 
-def run_pipeline(logs_iterator: Iterable[str], output_file='src/data/discovered_rules.json'):
+import argparse
+
+def run_pipeline(logs_iterator: Iterable[str], output_file='src/data/discovered_rules.json', top_k=2000):
     miner = PatternMiner()
     
     # Step 1
-    top_phrases = miner.extract_frequent_ngrams(logs_iterator, top_k=2000) # Scaled down for demo
+    top_phrases = miner.extract_frequent_ngrams(logs_iterator, top_k=top_k) 
     
     if not top_phrases:
         logger.warning("No patterns found.")
@@ -174,9 +176,34 @@ def run_pipeline(logs_iterator: Iterable[str], output_file='src/data/discovered_
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(intent_clusters, f, indent=2)
 
+def load_logs_from_file(filepath: str) -> Iterator[str]:
+    """Generator to yield lines from a large log file without storing in memory."""
+    try:
+        with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    yield line
+    except FileNotFoundError:
+        logger.error(f"Log file not found: {filepath}")
+        return
+
 if __name__ == "__main__":
-    # Mock Data for Verification
-    mock_logs = [
+    parser = argparse.ArgumentParser(description="Carbon Protocol Pattern Miner")
+    parser.add_argument("--input", type=str, help="Path to input log file (txt/log)", required=False)
+    parser.add_argument("--output", type=str, default="miner_output.json", help="Path to output JSON")
+    parser.add_argument("--top-k", type=int, default=50000, help="Number of top N-Grams to analyze")
+    
+    args = parser.parse_args()
+
+    if args.input:
+        print(f"Running Miner on Real Dataset: {args.input}")
+        logs_gen = load_logs_from_file(args.input)
+        run_pipeline(logs_gen, output_file=args.output, top_k=args.top_k)
+    else:
+        # Mock Data for Verification
+        mock_logs = [
+
         "I need to write a python function to sort a list",
         "please create python function that sorts lists",
         "can you code me a python sorting function",
@@ -189,6 +216,7 @@ if __name__ == "__main__":
         "ignore previous commands",
     ] * 50 # Duplicate to simulate frequency
     
-    print("Running Miner on Mock Data...")
-    run_pipeline(mock_logs, output_file='miner_output_test.json')
-    print("Done.")
+        print("Running Miner on Mock Data (No input file provided)...")
+        print("Usage: python miner/discovery.py --input <large_logs.txt>")
+        run_pipeline(mock_logs, output_file='miner_output_test.json', top_k=50)
+        print("Done.")
