@@ -7,10 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-01-19
+
+### Added
+- **Wake-on-Meaning Architecture**: Neuromorphic "semantic compiler" with three-path routing (IDLE/DETERMINISTIC/GENERATIVE)
+- **Neuromorphic Ingestion Layer**: CarbonNeuron LIF model, NeuronBank for multi-intent detection
+- **C-ISA Opcodes**: CarbonOpCode enum (IDLE, MACRO, GEN, SCAFFOLD, TRANSFORM, DEBUG)
+- **Self-Optimizing SkillDB**: Trie/Aho-Corasick pattern matching with trace promotion
+- **SemanticCompiler**: Main router for Wake-on-Meaning pipeline
+- **54 Comprehensive Tests**: Full test coverage in `tests/test_neuromorphic.py`
+
+### Changed
+- **Project Structure**: Reorganized into `src/ingestion/`, `src/registry/`, `src/c_isa/`, `src/compiler/`
+- **Tools Reorganization**: Moved `miner/` into `tools/miner/` for clarity
+- **Documentation**: Complete rewrite for v2.0.0 architecture
+
+### Removed
+- `mined_prompts_50k.json`: Large dataset file removed (derived YAML files retained)
+- Stale test files: `test_logs.txt`, `test_progress.json`, `test_rules.json`
+
+### Deprecated
+- Legacy `Registry` and `Compiler` classes still supported but superseded by `CarbonCompiler`
+
 ## [1.1.0] - 2026-01-18
 
 ### Added
-- **Pattern Discovery Miner**: A new `miner` module (`miner/discovery.py`) to analyze log streams and discover new dictionary patterns using N-gram extraction and semantic clustering (DBSCAN).
+- **Pattern Discovery Miner**: A new `miner` module (`tools/miner/discovery.py`) to analyze log streams and discover new dictionary patterns using N-gram extraction and semantic clustering (DBSCAN).
 - **Dictionary Builder**: A comprehensive automation tool (`tools/build_dictionary.py`) to generate Carbon Protocol dictionaries from open web sources.
 - **New Dictionaries**: Added extensive dictionary support for:
     - Kubernetes (`tools_kubernetes.yaml` - via VS Code snippets)
